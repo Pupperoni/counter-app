@@ -20,7 +20,7 @@ class App extends Component {
   // }
 
   componentDidMount() {
-    console.log("App - Mounted");
+    // console.log("App - Mounted");
     // Ajax Call
     // this.setState({ movies });
   }
@@ -58,7 +58,7 @@ class App extends Component {
     let counters = [...this.state.counters];
     const created = this.state.created + 1;
     counters.push({ id: created, value: 0 });
-    console.log(counters);
+    // console.log(counters);
     this.setState({ counters, created });
   };
 
