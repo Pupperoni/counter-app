@@ -10,7 +10,8 @@ class App extends Component {
       { id: 2, value: 0 },
       { id: 3, value: 0 },
       { id: 4, value: 0 }
-    ]
+    ],
+    created: 4
   };
 
   // constructor(props) {
@@ -53,6 +54,14 @@ class App extends Component {
     this.setState({ counters });
   };
 
+  handleAddCounter = () => {
+    let counters = [...this.state.counters];
+    const created = this.state.created + 1;
+    counters.push({ id: created, value: 0 });
+    console.log(counters);
+    this.setState({ counters, created });
+  };
+
   render() {
     // console.log("App - Rendered");
     return (
@@ -67,6 +76,7 @@ class App extends Component {
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
             onDelete={this.handleDelete}
+            onAddCounter={this.handleAddCounter}
           />
         </main>
       </React.Fragment>
