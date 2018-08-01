@@ -1,18 +1,11 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  componentDidUpdate(prevProps, prevState) {
-    // console.log("prevProps", prevProps);
-    // console.log("prevState", prevState);
-  }
+  componentDidUpdate() {}
 
-  componentWillUnmount() {
-    // console.log("Counter - Unmount");
-  }
+  componentWillUnmount() {}
 
   render() {
-    const wontDecrement = this.props.counter.value === 0 ? true : false;
-    // console.log("Counter - Rendered");
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
@@ -25,7 +18,7 @@ class Counter extends Component {
         <button
           onClick={() => this.props.onDecrement(this.props.counter)}
           className="btn btn-secondary btn-sm"
-          disabled={wontDecrement}
+          disabled={this.props.counter.value === 0 ? true : false}
         >
           -
         </button>

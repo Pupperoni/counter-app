@@ -19,11 +19,7 @@ class App extends Component {
   //   console.log("App - Constructor");
   // }
 
-  componentDidMount() {
-    // console.log("App - Mounted");
-    // Ajax Call
-    // this.setState({ movies });
-  }
+  componentDidMount() {}
 
   handleIncrement = counter => {
     const counters = [...this.state.counters];
@@ -58,12 +54,10 @@ class App extends Component {
     let counters = [...this.state.counters];
     const created = this.state.created + 1;
     counters.push({ id: created, value: 0 });
-    // console.log(counters);
     this.setState({ counters, created });
   };
 
   render() {
-    // console.log("App - Rendered");
     return (
       <React.Fragment>
         <NavBar
