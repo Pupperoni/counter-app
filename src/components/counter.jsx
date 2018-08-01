@@ -11,6 +11,7 @@ class Counter extends Component {
   }
 
   render() {
+    const wontDecrement = this.props.counter.value === 0 ? true : false;
     // console.log("Counter - Rendered");
     return (
       <div>
@@ -24,6 +25,7 @@ class Counter extends Component {
         <button
           onClick={() => this.props.onDecrement(this.props.counter)}
           className="btn btn-secondary btn-sm"
+          disabled={wontDecrement}
         >
           -
         </button>
