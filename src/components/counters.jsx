@@ -13,24 +13,41 @@ class Counters extends Component {
     } = this.props;
     return (
       <div>
-        <button onClick={onReset} className="btn btn-primary btn-sm m-2">
-          Reset
-        </button>
-        <button onClick={onAddCounter} className="btn btn-success btn-sm m-2">
-          Add Counter
-        </button>
         <table>
-          {counters.map(counter => (
+          <thead>
             <tr>
-              <Counter
-                key={counter.id}
-                onDelete={onDelete}
-                onIncrement={onIncrement}
-                onDecrement={onDecrement}
-                counter={counter}
-              />
+              <td>
+                <button
+                  onClick={onReset}
+                  className="btn btn-primary btn-sm m-2"
+                >
+                  Reset
+                </button>
+              </td>
+              <td>
+                <button
+                  onClick={onAddCounter}
+                  className="btn btn-success btn-sm m-2"
+                >
+                  Add Counter
+                </button>
+              </td>
             </tr>
-          ))}
+          </thead>
+
+          <tbody>
+            {counters.map(counter => (
+              <tr key={counter.id}>
+                <Counter
+                  key={counter.id}
+                  onDelete={onDelete}
+                  onIncrement={onIncrement}
+                  onDecrement={onDecrement}
+                  counter={counter}
+                />
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     );
