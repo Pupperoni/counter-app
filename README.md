@@ -10,3 +10,18 @@ This is a simple Counter application that we see in most online shopping applica
 - Remove entire product from your cart
 - Add a product to the list
 - Reset all product counters to 0
+
+## Dependencies
+
+- Use `npm@5.6.0` or later to install the dependencies
+  - Bootstrap 4.1.1 `npm install bootstrap@4.1.1`
+  - Create React App `npm install create-react-app`
+
+## Usage
+
+When everything is set up, move to the root directory and run the server.
+
+```
+$ cd counter-app
+$ npm start
+```
