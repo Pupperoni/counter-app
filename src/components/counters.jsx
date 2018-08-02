@@ -19,15 +19,19 @@ class Counters extends Component {
         <button onClick={onAddCounter} className="btn btn-success btn-sm m-2">
           Add Counter
         </button>
-        {counters.map(counter => (
-          <Counter
-            key={counter.id}
-            onDelete={onDelete}
-            onIncrement={onIncrement}
-            onDecrement={onDecrement}
-            counter={counter}
-          />
-        ))}
+        <table>
+          {counters.map(counter => (
+            <tr>
+              <Counter
+                key={counter.id}
+                onDelete={onDelete}
+                onIncrement={onIncrement}
+                onDecrement={onDecrement}
+                counter={counter}
+              />
+            </tr>
+          ))}
+        </table>
       </div>
     );
   }
