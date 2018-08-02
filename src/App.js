@@ -4,8 +4,8 @@ import Counters from "./components/counters";
 import "./App.css";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     const counters = [
       { id: 1, value: 4 },
       { id: 2, value: 0 },
