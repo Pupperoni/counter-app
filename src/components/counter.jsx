@@ -5,14 +5,10 @@ class Counter extends Component {
 
   componentWillUnmount() {}
 
-  tdStyles = {
-    width: "55px"
-  };
-
   render() {
     return (
       <React.Fragment>
-        <td style={this.tdStyles}>
+        <td>
           <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         </td>
         <td>
